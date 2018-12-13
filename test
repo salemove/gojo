@@ -1,0 +1,71 @@
+#!/bin/bash
+set -euo pipefail
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+assert_equals() {
+  local command=("$@")
+  local expected
+  local actual
+  local exit_code
+  local failure_reason
+
+  expected="$(< /dev/stdin)"
+  set +e
+  actual="$("${command[@]}" 2>&1)"
+  exit_code="$?"
+  set -e
+
+  if [[ "$exit_code" == "0" ]]; then
+    failure_reason="got"
+  else
+    failure_reason="failed with"
+  fi
+
+  if [[ "$actual" != "$expected" ]]; then
+    printf "${RED}Expected %s to return:${NC}\\n%s\\n${RED}But %s:${NC}\\n%s\\n" \
+      "${command[*]}" \
+      "$expected" \
+      "$failure_reason" \
+      "$actual"
+    exit 1
+  fi
+}
+
+get_log=(git log --oneline @~6..@ '--format=* %s')
+assert_equals "${get_log[@]}" <<EOF
+* Add painkillers
+* Remove bought items
+* Add snowboarding equipment
+* Remove bought items
+* Add eggs & ham
+* Create shopping list with milk
+EOF
+
+get_egg_and_ham_file=(git show @~4:shopping_list.txt)
+assert_equals "${get_egg_and_ham_file[@]}" <<EOF
+# Things to buy
+
+- Bread
+- Butter
+- Milk
+- Juice
+- Cheese
+- Eggs
+- Ham
+EOF
+
+get_initial_file=(git show @~5:shopping_list.txt)
+assert_equals "${get_initial_file[@]}" <<EOF
+# Things to buy
+
+- Bread
+- Butter
+- Milk
+- Juice
+- Cheese
+EOF
+
+echo -e "${GREEN}Success!${NC}"

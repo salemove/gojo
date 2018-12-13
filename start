@@ -1,0 +1,13 @@
+#!/bin/bash
+set -euo pipefail
+
+# Print instructions
+echo "Welcome to kata nr 4!"
+echo
+echo "You do your shopping and keep using the shopping list. After a while you\
+ find that the same old \"Add eggs & ham\" are still squashed into the original\
+ \"Create shopping list\"! You don't understand how it can be, but you're\
+ inner perfectionist insists you go back and fix it again."
+echo
+echo "Split \"Create shopping list\" into \"Create shopping list with milk\" and\
+ \"Add eggs & ham\". Good luck!"
