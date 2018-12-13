@@ -1,0 +1,13 @@
+#!/bin/bash
+set -euo pipefail
+
+# Print instructions
+echo "Welcome to kata nr 2!"
+echo
+echo "You've cleaned up the milk typo and the history of you shopping list\
+ is perfect. Couldn't be any better. Wait, actually ... Now you realize that\
+ milk is pretty much the same thing as cheese and butter and so should've\
+ been in the list from the start."
+echo
+echo "Squash the \"Add milk\" commit into the \"Create shopping list\" commit\
+ to create a new \"Create shopping list with milk\" commit. Good luck!"
