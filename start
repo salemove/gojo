@@ -1,0 +1,14 @@
+#!/bin/bash
+set -euo pipefail
+
+# Print instructions
+echo "Welcome to kata nr 3!"
+echo
+echo "Happy with your shopping list you go looking for your scarf and mittens\
+ to actually go shopping. But when you come back to your computer you realize\
+ that you forgot to lock your computer while away and you see that Vlad has\
+ already squashed all of your shopping list history into a single commit. You\
+ set out to restore order."
+echo
+echo "Split the single \"Create shopping list\" commit back into separate\
+ \"Create shopping list with milk\" and \"Add eggs & ham\" commits. Good luck!"
