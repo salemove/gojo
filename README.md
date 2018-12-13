@@ -21,5 +21,5 @@ over from the top, by cloning this repository again.
 
 1. **Fixup**: `kata-1-fixup`
 1. **Squash**: `kata-2-squash`
-1. **Commit splitting**: `kata-3-commit-splitting`
-1. **Commit redistributing**: `kata-4-commit-redistributing`
+1. **Commit splitting**: `kata-3-split-commit`
+1. **Splitting an old commit**: `kata-4-split-old-commit`
