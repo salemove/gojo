@@ -1,0 +1,32 @@
+#!/bin/bash
+set -euo pipefail
+
+# Prepare kata
+if [[ -n $(git status -s) ]]; then
+  git stash -q --include-untracked
+  HAS_STASHED_CHANGES=true
+fi
+
+cat >> shopping_list.txt <<EOF
+- Nvidia GeForce RTX 2080 TI
+- Ice
+EOF
+git add shopping_list.txt
+git commit -q --message "Add secret business idea equipment"
+git reset -q --hard @~
+
+if [[ -n "${HAS_STASHED_CHANGES:-}" ]]; then
+  git stash pop -q
+fi
+
+
+# Print instructions
+echo "Welcome to kata nr 6!"
+echo
+echo "You're starting to vaguely remember that you had a brilliant idea before your\
+ concussion. You think you even added some equipment required for it into your\
+ shopping list, but you can't seem to find them. Unsure whether you really had\
+ a good idea or if it was just a fever dream, you set out to recover the lost\
+ shopping list items."
+echo
+echo "Recover the mysterious commit that you lost. Good luck!"
