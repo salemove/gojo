@@ -2,5 +2,6 @@
 
 - Bread
 - Butter
+- Milk
 - Juice
 - Cheese
