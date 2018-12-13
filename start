@@ -1,0 +1,14 @@
+#!/bin/bash
+set -euo pipefail
+
+# Print instructions
+echo "Welcome to kata nr 5!"
+echo
+echo "Embarrassed about your snowboarding mishap, you promise never to visit that\
+ mountain again and decide to burn any proof about it ever having happened. You\
+ still need both a helmet and painkillers, however."
+echo
+echo "Move \"Snowboarding helmet\" shopping list item into the \"Add snowboarding\
+ equipment\" commit and \"Painkillers\" item into the original \"Create shopping\
+ list with milk\" commit. Ensure both are removed from the list in the first\
+ possible \"Remove bought items\" commits. Good luck!"
