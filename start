@@ -1,0 +1,16 @@
+#!/bin/bash
+set -euo pipefail
+
+# Prepare kata
+sed -e 's/Malk/Milk/g' shopping_list.txt > shopping_list.txt.bak
+mv -f shopping_list.txt.bak shopping_list.txt
+
+# Print instructions
+echo "Welcome to kata nr 1!"
+echo
+echo "You were writing a shopping list but in a hurry added \"Malk\" into the\
+ list instead of \"Milk\". You've already fixed the mistake, but you also want\
+ to keep the history clean."
+echo
+echo "Your mission, should you choose to accept it, is to add the uncommited\
+ changes to the \"Add milk\" commit. Good luck!"
