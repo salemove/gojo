@@ -5,3 +5,5 @@
 - Malk
 - Juice
 - Cheese
+- Eggs
+- Ham
