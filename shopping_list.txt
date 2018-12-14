@@ -5,3 +5,5 @@
 - Milk
 - Juice
 - Cheese
+- Eggs
+- Ham
