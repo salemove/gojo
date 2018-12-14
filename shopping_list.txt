@@ -6,3 +6,5 @@
 - Juice
 - Cheese
 - Painkillers
+- Eggs
+- Ham
