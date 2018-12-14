@@ -23,3 +23,5 @@ over from the top, by cloning this repository again.
 1. **Squash**: `kata-2-squash`
 1. **Commit splitting**: `kata-3-split-commit`
 1. **Splitting an old commit**: `kata-4-split-old-commit`
+1. **Redistribute commit contents between different commits**: `kata-5-redistribute-commits`
+1. **Recover a lost commit**: `kata-6-recover`
