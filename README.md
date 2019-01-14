@@ -5,9 +5,9 @@ using more advanced git features.
 
 ## Usage
 
-* Clone this repository: `git@github.com:salemove/gojo.git && cd gojo`.
-* See the list of available katas with `git branch`. Every branch is
-  a kata.
+* Clone this repository: `git clone https://github.com/salemove/gojo.git && cd gojo`.
+* See the list of available katas with `git branch -a`. Every `kata-*`
+  branch is a kata.
 * Pick a kata and start it with e.g. `git checkout kata-1-fixup`.
 * Run `./start` to start the kata and print instructions.
 * Do it.
